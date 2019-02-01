@@ -19,6 +19,5 @@ from jobapp_form import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.jobapp_form, name = 'jobapp_form'),
-    path('candidate_info', views.candidate_info, name = 'candidate_info'),
+    path('', views.jobapp_form, name = 'jobapp_form')
 ]

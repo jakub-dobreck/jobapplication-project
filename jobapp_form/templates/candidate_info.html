@@ -1,1 +1,15 @@
-Info
+<!doctype html>
+
+<html lang = "en">
+    <head>
+        <meta charset = "utf-8">
+        <title>Job Application</title>
+        <meta name = "author" content = "Jakub Dobreck">
+    </head>
+
+    <body>
+        <img src="{{ candidate.avatar }}" /><br />
+        {{ candidate.first_name }} {{ candidate.last_name }}, <a href="{{ candidate.cv_url }}" download>CV</a><br />
+        added {{ candidate.date }} at {{ candidate.time }}
+    </body>
+</html>

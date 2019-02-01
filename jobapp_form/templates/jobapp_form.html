@@ -1,1 +1,30 @@
-Form
+<!doctype html>
+
+<html lang = "en">
+    <head>
+        <meta charset = "utf-8">
+        <title>Job Application</title>
+        <meta name = "author" content = "Jakub Dobreck">
+        <link rel="stylesheet" href="https://uplycdn.com/widget/dqupyrgsJwQu/app.a732548d.css">
+        <script src="https://uplycdn.com/widget/Yu922Xq6RDLZ/app.30a67353.js"></script>
+    </head>
+
+    <body>
+        <form method="POST" action="{% url 'jobapp_form' %}">
+            {% csrf_token %}
+                First name: <br />
+                <input type="text" name="first_name" /><br /><br />
+                Last name: <br />
+                <input type="text" name="last_name" /><br /><br />
+                Profile photo: <br />
+                <uplyfile-uploader publickey="rekrutacjakey" name="picture" required="true" accept="image/*"></uplyfile-uploader><br /><br />
+                CV in .pdf: <br />
+                <uplyfile-uploader publickey="rekrutacjakey" name="cv" required="true" accept=".pdf"></uplyfile-uploader><br /><br />
+                <input type="submit" value="Submit" />
+            </form>
+    </body>
+</html>
+
+
+
+
